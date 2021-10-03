@@ -8,9 +8,19 @@
 import UIKit
 import AVFoundation
 
-class ViewController: UIViewController {
 
-    var isLightOn: Bool = true
+class ViewController: UIViewController {
+    
+    override var shouldAutorotate: Bool
+    {
+        return false
+    }
+
+    var isLightOn: Int = 0
+    var levelLight: Int = 1
+    
+    @IBOutlet weak var buttonTorch: UIButton!
+    @IBOutlet weak var buttonScreen: UIButton!
     
     override var prefersStatusBarHidden: Bool {
         return true
@@ -29,34 +39,61 @@ class ViewController: UIViewController {
         if ((device?.hasTorch) != nil) {
             do {
                 try device?.lockForConfiguration()
-                if (device?.torchMode == AVCaptureDevice.TorchMode.on) {
+                device?.torchMode = AVCaptureDevice.TorchMode.on
+                switch levelLight {
+                case 1:
+                    try device?.setTorchModeOn(level: 0.25)
+                    buttonTorch.setTitle("0.25", for: .normal)
+                    levelLight = 2
+                case 2:
+                    try device?.setTorchModeOn(level: 0.5)
+                    buttonTorch.setTitle("0.5", for: .normal)
+                    levelLight = 3
+                case 3:
+                    try device?.setTorchModeOn(level: 0.75)
+                    buttonTorch.setTitle("0.75", for: .normal)
+                    levelLight = 4
+                case 4:
+                    try device?.setTorchModeOn(level: 1.0)
+                    buttonTorch.setTitle("1.0", for: .normal)
+                    levelLight = 0
+                default:
                     device?.torchMode = AVCaptureDevice.TorchMode.off
-                } else {
-                    do {
-                        try device?.setTorchModeOn(level: 1.0)
-                    } catch {
-                        print(error)
-                    }
-                }
+                    buttonTorch.setTitle("torch", for: .normal)
+                    levelLight = 1
+
                 device?.unlockForConfiguration()
+                }
             } catch {
                 print(error)
             }
         }
     }
     
+    
     @IBAction func buttonPressed2(_ sender: Any) {
-        isLightOn.toggle()
+        switch isLightOn {
+        case 1: isLightOn = 2
+        case 2: isLightOn = 0
+        default: isLightOn = 1
+        }
         updateColor()
         
     }
     
     func updateColor() {
-        if isLightOn == true{
+        switch isLightOn {
+        case 1:
+            view.backgroundColor = .lightGray
+            buttonScreen.setTitle("light gray", for: .normal)
+        case 2:
             view.backgroundColor = .white
-        }else{
+            buttonScreen.setTitle("white", for: .normal)
+        default:
             view.backgroundColor = .black
+            buttonScreen.setTitle("screen", for: .normal)
         }
     }
+    
 }
 
