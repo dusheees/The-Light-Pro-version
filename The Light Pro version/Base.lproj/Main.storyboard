@@ -16,10 +16,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D5z-tj-xvm">
-                                <rect key="frame" x="214" y="812" width="180" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D5z-tj-xvm">
+                                <rect key="frame" x="229" y="802" width="165" height="60"/>
                                 <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="165" id="5fd-PJ-I6d"/>
+                                    <constraint firstAttribute="height" constant="60" id="M3s-5d-mHB"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="screen">
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -33,10 +36,13 @@
                                     <action selector="buttonPressed2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UXz-HM-60R"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RLI-Bh-TFT">
-                                <rect key="frame" x="20" y="812" width="180" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RLI-Bh-TFT">
+                                <rect key="frame" x="20" y="802" width="165" height="60"/>
                                 <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="27E-MZ-3ct"/>
+                                    <constraint firstAttribute="width" constant="165" id="M0A-4a-KbK"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="torch">
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -53,6 +59,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="D5z-tj-xvm" secondAttribute="trailing" constant="20" id="61W-cv-bai"/>
+                            <constraint firstItem="D5z-tj-xvm" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="EhN-qy-Kwn"/>
+                            <constraint firstItem="RLI-Bh-TFT" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="QYL-Dw-LwL"/>
+                            <constraint firstItem="RLI-Bh-TFT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="zpG-Iq-RZf"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="buttonScreen" destination="D5z-tj-xvm" id="pbE-P5-OpG"/>

@@ -11,10 +11,10 @@ import AVFoundation
 
 class ViewController: UIViewController {
     
-    override var shouldAutorotate: Bool
+    /*override var shouldAutorotate: Bool
     {
         return false
-    }
+    }*/
 
     var isLightOn: Int = 0
     var levelLight: Int = 1
