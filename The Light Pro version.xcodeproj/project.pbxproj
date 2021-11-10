@@ -13,6 +13,10 @@
 		55823A5D270912B7002937DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55823A5B270912B7002937DB /* Main.storyboard */; };
 		55823A5F270912B7002937DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55823A5E270912B7002937DB /* Assets.xcassets */; };
 		55823A62270912B7002937DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55823A60270912B7002937DB /* LaunchScreen.storyboard */; };
+		55F14B80273C28BD009CE0DD /* Screenshot04.png in Resources */ = {isa = PBXBuildFile; fileRef = 55F14B7C273C28BC009CE0DD /* Screenshot04.png */; };
+		55F14B81273C28BD009CE0DD /* Screenshot02.png in Resources */ = {isa = PBXBuildFile; fileRef = 55F14B7D273C28BC009CE0DD /* Screenshot02.png */; };
+		55F14B82273C28BD009CE0DD /* Screenshot03.png in Resources */ = {isa = PBXBuildFile; fileRef = 55F14B7E273C28BC009CE0DD /* Screenshot03.png */; };
+		55F14B83273C28BD009CE0DD /* Screenshot01.png in Resources */ = {isa = PBXBuildFile; fileRef = 55F14B7F273C28BC009CE0DD /* Screenshot01.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		55823A5E270912B7002937DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55823A61270912B7002937DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55823A63270912B7002937DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55F14B7C273C28BC009CE0DD /* Screenshot04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screenshot04.png; sourceTree = "<group>"; };
+		55F14B7D273C28BC009CE0DD /* Screenshot02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screenshot02.png; sourceTree = "<group>"; };
+		55F14B7E273C28BC009CE0DD /* Screenshot03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screenshot03.png; sourceTree = "<group>"; };
+		55F14B7F273C28BC009CE0DD /* Screenshot01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screenshot01.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,7 @@
 		55823A54270912B7002937DB /* The Light Pro version */ = {
 			isa = PBXGroup;
 			children = (
+				55F14B7B273C28BC009CE0DD /* Screenshots */,
 				55823A55270912B7002937DB /* AppDelegate.swift */,
 				55823A57270912B7002937DB /* SceneDelegate.swift */,
 				55823A59270912B7002937DB /* ViewController.swift */,
@@ -66,6 +75,17 @@
 			);
 			path = "The Light Pro version";
 			sourceTree = "<group>";
+		};
+		55F14B7B273C28BC009CE0DD /* Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				55F14B7C273C28BC009CE0DD /* Screenshot04.png */,
+				55F14B7D273C28BC009CE0DD /* Screenshot02.png */,
+				55F14B7E273C28BC009CE0DD /* Screenshot03.png */,
+				55F14B7F273C28BC009CE0DD /* Screenshot01.png */,
+			);
+			path = Screenshots;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -126,7 +146,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				55823A62270912B7002937DB /* LaunchScreen.storyboard in Resources */,
+				55F14B80273C28BD009CE0DD /* Screenshot04.png in Resources */,
+				55F14B82273C28BD009CE0DD /* Screenshot03.png in Resources */,
+				55F14B83273C28BD009CE0DD /* Screenshot01.png in Resources */,
 				55823A5F270912B7002937DB /* Assets.xcassets in Resources */,
+				55F14B81273C28BD009CE0DD /* Screenshot02.png in Resources */,
 				55823A5D270912B7002937DB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,12 +325,13 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "ru.komplayer31.The-Light-Pro-version";
+				PRODUCT_BUNDLE_IDENTIFIER = "ru.komplayer31.Controls-practice";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -333,12 +358,13 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "ru.komplayer31.The-Light-Pro-version";
+				PRODUCT_BUNDLE_IDENTIFIER = "ru.komplayer31.Controls-practice";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

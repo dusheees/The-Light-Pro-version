@@ -16,16 +16,18 @@ class ViewController: UIViewController {
         return false
     }*/
 
+    // MARK: - Properties
     var isLightOn: Int = 0
     var levelLight: Int = 1
-    
-    @IBOutlet weak var buttonTorch: UIButton!
-    @IBOutlet weak var buttonScreen: UIButton!
-    
     override var prefersStatusBarHidden: Bool {
         return true
     }
-    
+
+    // MARK: - UIProperties
+    @IBOutlet weak var buttonTorch: UIButton!
+    @IBOutlet weak var buttonScreen: UIButton!
+        
+    // MARK: - Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -33,7 +35,24 @@ class ViewController: UIViewController {
         
     }
     
+    func updateColor() {
+        switch isLightOn {
+        case 1:
+            view.backgroundColor = .red
+            buttonScreen.setTitle("red", for: .normal)
+        case 2:
+            view.backgroundColor = .yellow
+            buttonScreen.setTitle("yellow", for: .normal)
+        case 3:
+            view.backgroundColor = .green
+            buttonScreen.setTitle("green", for: .normal)
+        default:
+            view.backgroundColor = .black
+            buttonScreen.setTitle("screen", for: .normal)
+        }
+    }
     
+    // MARK: - Actions
     @IBAction func buttonPressed1(_ sender: Any) {
         let device = AVCaptureDevice.default(for: AVMediaType.video)
         if ((device?.hasTorch) != nil) {
@@ -74,26 +93,15 @@ class ViewController: UIViewController {
     @IBAction func buttonPressed2(_ sender: Any) {
         switch isLightOn {
         case 1: isLightOn = 2
-        case 2: isLightOn = 0
+        case 2: isLightOn = 3
+        case 3: isLightOn = 0
         default: isLightOn = 1
         }
+//        isLightOn = (isLightOn + 1) % 3
         updateColor()
         
     }
     
-    func updateColor() {
-        switch isLightOn {
-        case 1:
-            view.backgroundColor = .lightGray
-            buttonScreen.setTitle("light gray", for: .normal)
-        case 2:
-            view.backgroundColor = .white
-            buttonScreen.setTitle("white", for: .normal)
-        default:
-            view.backgroundColor = .black
-            buttonScreen.setTitle("screen", for: .normal)
-        }
-    }
-    
 }
+
 
